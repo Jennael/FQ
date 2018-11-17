@@ -26,7 +26,8 @@
         <activity android:name=".SettingsProfile" />
         <activity android:name=".SettingsAccount" />
         <activity android:name=".SettingsMenuDish" />
-        <activity android:name=".SettingsMenuAdd"></activity>
+        <activity android:name=".SettingsMenuAdd" />
+        <activity android:name=".LoginLoading"></activity>
     </application>
 
 </manifest>

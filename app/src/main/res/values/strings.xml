@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FQ</string>
+    <string name="login_error_prompt">You have keyed in the wrong ID! Try again.</string>
 </resources>

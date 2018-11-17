@@ -1,5 +1,6 @@
 package com.jem.fq;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -18,12 +19,24 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText storeID = findViewById(R.id.storeID);
+        // check if there is an intent
+        Intent anyIntent = getIntent();
+        if (anyIntent != null && anyIntent.getStringExtra("name") != null){
+            TextView loginError = findViewById(R.id.loginError);
+            loginError.setText(R.string.login_error_prompt);
+        }
+
+        final Intent startLogin = new Intent(this, LoginLoading.class);
+
+        final EditText storeID = findViewById(R.id.storeID);
         storeID.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                String id = storeID.getEditableText().toString();
                 if (actionId == EditorInfo.IME_ACTION_DONE){
-                    Toast.makeText(LoginPage.this, "hi", Toast.LENGTH_SHORT).show();
+                    startLogin.putExtra("id",id);
+                    startActivity(startLogin);
+
                     return true;
                 }
                 return false;
