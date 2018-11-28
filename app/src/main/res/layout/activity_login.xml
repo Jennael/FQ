@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginPage"
     android:gravity="center|top"
     android:orientation="vertical">
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="70sp"
+        android:padding="60sp"
         android:src="@drawable/fq_logo"
-
         android:tint="@color/colorFQ"/>
 
     <TextView
@@ -27,23 +25,25 @@
         android:id="@+id/loginError"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/ErrorColor"
+        android:textColor="@color/ErrorTextColor"
         android:text=""
         android:layout_marginTop="5sp"
-        android:layout_marginHorizontal="20sp"/>
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"/>
     <EditText
+        android:autofillHints="@string/pwHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/storeID"
         android:maxLines="1"
         android:maxLength="10"
         android:hint="@string/pwHint"
+        android:textColor="@color/TextColor"
         android:textColorHighlight="@color/colorFQ"
         android:inputType="number"
         android:imeOptions="actionDone"
-        android:background="#FFFFFF"
-        android:drawableBottom="@color/colorFQ"
-        android:layout_marginHorizontal="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
         android:layout_marginBottom="10sp"
         />
 
@@ -52,7 +52,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:layout_columnWeight="1"
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"/>
 

@@ -5,15 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QueueMain"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="top">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fqToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/fqTheme"
+        app:title="Queue"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Queue Main"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_gravity="center"/>
+        android:orientation="horizontal"
+        android:background="@color/fqTheme">
+        <Button
+            android:id="@+id/queuePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Queue"
+            android:textColor="@color/CurrentTab"
+            android:fontFamily="@font/source_code_pro"
+            android:background="@null"
+            android:onClick="gotoQueue"/>
+        <Button
+            android:id="@+id/preorderPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Preorder"
+            android:fontFamily="@font/source_code_pro"
+            android:background="@null"
+            android:onClick="gotoPreorder"/>
+
+        <Button
+            android:id="@+id/settingsPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Settings"
+            android:fontFamily="@font/source_code_pro"
+            android:background="@null"
+            android:onClick="gotoSettings"/>
+    </LinearLayout>
 
 
 </LinearLayout>
