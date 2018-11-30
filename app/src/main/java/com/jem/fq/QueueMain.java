@@ -1,5 +1,6 @@
 package com.jem.fq;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -59,12 +60,14 @@ public class QueueMain extends AppCompatActivity {
         Intent preorder = new Intent(this,PreorderMain.class);
         preorder.putExtra("name", user_name);
         startActivity(preorder);
+        finish();
     }
 
     public void gotoSettings(View view) {
         Intent settings = new Intent(this,SettingsMain.class);
         settings.putExtra("name", user_name);
         startActivity(settings);
+        finish();
     }
 
     public void gotoQueue(View view) {

@@ -33,6 +33,7 @@ public class PreorderMain extends AppCompatActivity {
         Intent queue = new Intent(this, QueueMain.class);
         queue.putExtra("name", user_name);
         startActivity(queue);
+        finish();
     }
 
     public void gotoPreorder(View view) {
@@ -43,5 +44,6 @@ public class PreorderMain extends AppCompatActivity {
         Intent settings = new Intent(this,SettingsMain.class);
         settings.putExtra("name", user_name);
         startActivity(settings);
+        finish();
     }
 }

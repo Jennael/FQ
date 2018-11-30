@@ -8,6 +8,7 @@
         <item name="colorPrimary">@color/fqTheme</item>
         <item name="colorPrimaryDark">@color/fqThemeDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="LoginTheme" parent="Theme.AppCompat">

@@ -8,15 +8,13 @@
     android:orientation="vertical"
     android:gravity="top">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/fqToolbar"
+    <android.support.design.widget.NavigationView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/fqTheme"
-        app:title="Queue"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        android:layout_height="56sp"
+        app:menu="@menu/menu"
+        android:background="@color/fqTheme">
+
+    </android.support.design.widget.NavigationView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,16 +40,6 @@
             android:background="@null"
             android:onClick="gotoPreorder"/>
 
-        <Button
-            android:id="@+id/settingsPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Settings"
-            android:fontFamily="@font/source_code_pro"
-            android:textColor="@color/CurrentTab"
-            android:background="@null"
-            android:onClick="gotoSettings"/>
     </LinearLayout>
 
 </LinearLayout>

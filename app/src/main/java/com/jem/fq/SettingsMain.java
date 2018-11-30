@@ -30,12 +30,14 @@ public class SettingsMain extends AppCompatActivity {
         Intent queue = new Intent(this, QueueMain.class);
         queue.putExtra("name", user_name);
         startActivity(queue);
+        finish();
     }
 
     public void gotoPreorder(View view) {
         Intent preorder = new Intent(this,PreorderMain.class);
         preorder.putExtra("name", user_name);
         startActivity(preorder);
+        finish();
     }
 
     public void gotoSettings(View view) {
